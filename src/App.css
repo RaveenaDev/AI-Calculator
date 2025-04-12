@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: rgb(25,23,22);
+    color: white;
+    font-family: 'Poppins',sans-serif;
+}
+
+.App{
+    min-height: 100vh;
+}
