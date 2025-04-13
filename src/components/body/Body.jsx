@@ -340,28 +340,51 @@ const Body = () => {
                                         </div>
                                     )
                                 ) : (
-                                    <span>Upload</span>
+                                    <span style={{cursor:'default',marginBottom:'3px'}}>Upload</span>
                                 )}
                             </div>
                         </div>
 
                         <div>
-                            <button className={styles.sendBtn} onClick={handleSend}>
-                                <svg width="30" height="30" viewBox="0 0 39 35" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_54_116" style={{maskType: 'alpha'}} maskUnits="userSpaceOnUse" x="1"
-                                          y="0" width="35" height="35">
-                                        <rect x="1" width="35" height="35" fill="#D9D9D9"/>
-                                    </mask>
-                                    <g mask="url(#mask0_54_116)">
-                                        <g filter="url(#filter0_d_54_116)">
-                                            <path
-                                                d="M5.375 29.1666V20.4166L17.0417 17.5L5.375 14.5833V5.83331L33.0833 17.5L5.375 29.1666Z"
-                                                fill="#FF9C00"
-                                            />
-                                        </g>
-                                    </g>
-                                </svg>
+                            <button className={styles.sendBtn} onClick={handleSend} style={{ cursor: selectedFile ? 'pointer' : 'default' }}>
+
+                                {
+                                    selectedFile ? (
+                                        <svg width="30" height="30" viewBox="0 0 39 35" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0_54_116" style={{maskType: 'alpha'}}
+                                                  maskUnits="userSpaceOnUse" x="1"
+                                                  y="0" width="35" height="35">
+                                                <rect x="1" width="35" height="35" fill="#D9D9D9"/>
+                                            </mask>
+                                            <g mask="url(#mask0_54_116)">
+                                                <g filter="url(#filter0_d_54_116)">
+                                                    <path
+                                                        d="M5.375 29.1666V20.4166L17.0417 17.5L5.375 14.5833V5.83331L33.0833 17.5L5.375 29.1666Z"
+                                                        fill="#FF9C00"
+                                                    />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    ) :
+                                        (
+                                            <svg width="28" height="28" viewBox="0 0 35 35" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0" style={{maskType: "alpha"}} maskUnits="userSpaceOnUse"
+                                                      x="0" y="0"
+                                                      width="35" height="35">
+                                                    <rect width="35" height="35" fill="#A2A2A2"/>
+                                                </mask>
+                                                <g mask="url(#mask0)">
+                                                    <path
+                                                        d="M4.375 29.1666V5.83331L32.0833 17.5L4.375 29.1666ZM7.29167 24.7916L24.5729 17.5L7.29167 10.2083V15.3125L16.0417 17.5L7.29167 19.6875V24.7916Z"
+                                                        fill="#A2A2A2"
+                                                    />
+                                                </g>
+                                            </svg>
+                                        )
+                                }
+
                             </button>
                         </div>
                     </div>
